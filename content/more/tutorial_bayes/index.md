@@ -142,7 +142,7 @@ To summarize:
 <p style=";color: #C5EC5A">(f) In the figure 
 <a href="https://seeing-theory.brown.edu/bayesian-inference/index.html"> (source) </a> assign the following label to the appropriate quantities: priors, test accuracy, probability of the results, and posteriors.
 </p>
-<img src="test_sample.png" height="400" width="400"  />
+<img src="test_sample.PNG" height="400" width="400"  />
 
 <details>
 <summary> <i> solution  </i> </summary>
