@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chiara Aina</title>
-    <link>https://chiaraina.github.io/</link>
-      <atom:link href="https://chiaraina.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://chiaraaina.github.io/</link>
+      <atom:link href="https://chiaraaina.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Chiara Aina</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://chiaraina.github.io/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_512x512_fill_lanczos_center_2.png</url>
+      <url>https://chiaraaina.github.io/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_512x512_fill_lanczos_center_2.png</url>
       <title>Chiara Aina</title>
-      <link>https://chiaraina.github.io/</link>
+      <link>https://chiaraaina.github.io/</link>
     </image>
     
     <item>
       <title>Example Page 1</title>
-      <link>https://chiaraina.github.io/courses/example/example1/</link>
+      <link>https://chiaraaina.github.io/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://chiaraina.github.io/courses/example/example1/</guid>
+      <guid>https://chiaraaina.github.io/courses/example/example1/</guid>
       <description>&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
@@ -35,9 +35,9 @@
     
     <item>
       <title>Example Page 2</title>
-      <link>https://chiaraina.github.io/courses/example/example2/</link>
+      <link>https://chiaraaina.github.io/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://chiaraina.github.io/courses/example/example2/</guid>
+      <guid>https://chiaraaina.github.io/courses/example/example2/</guid>
       <description>&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
 &lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
@@ -56,9 +56,9 @@
     
     <item>
       <title>Example Talk</title>
-      <link>https://chiaraina.github.io/talk/example/</link>
+      <link>https://chiaraaina.github.io/talk/example/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/talk/example/</guid>
+      <guid>https://chiaraaina.github.io/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
@@ -78,9 +78,9 @@
     
     <item>
       <title>Introduction to Bayesian Updating</title>
-      <link>https://chiaraina.github.io/more/tutorial_bayes/</link>
+      <link>https://chiaraaina.github.io/more/tutorial_bayes/</link>
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/more/tutorial_bayes/</guid>
+      <guid>https://chiaraaina.github.io/more/tutorial_bayes/</guid>
       <description>&lt;p style=&#34;font-size:80%&#34;&gt;Inspired by a lecture of &lt;a href=&#34;https://www.cns.nyu.edu/malab/&#34;&gt;Prof. Wei Ji Ma &lt;/a&gt;, I wrote this introduction to Bayesian updating. (Behavioral Theory, Fall 2019). &lt;/p&gt;
 &lt;h2 id=&#34;what-you-know-already-about-bayes-rule&#34;&gt;What you know already about Bayes&amp;rsquo; rule&lt;/h2&gt;
 &lt;p&gt;Bayes&amp;rsquo; Theorem shows the relationship between a conditional probability and its counterpart.
@@ -393,9 +393,9 @@ The host opens door No.3. Now we know that $ \Pr(C_3 \mid 0_3) = 0 $ (posterior 
     
     <item>
       <title>other</title>
-      <link>https://chiaraina.github.io/more/other/</link>
+      <link>https://chiaraaina.github.io/more/other/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/more/other/</guid>
+      <guid>https://chiaraaina.github.io/more/other/</guid>
       <description>&lt;p&gt;
 &lt;a href=&#34;https://www.instagram.com/reci.py/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;./recipy.jpg&#34;
 alt=&#34;Markdown Monster icon&#34;
@@ -430,8 +430,8 @@ style=&#34;float: right; margin-bottom: 10px;zoom:15% &#34; /&gt;&lt;/a&gt;&lt;/
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraina.github.io/more/other/gallery/aikido1.jpg&#34; &gt;
-  &lt;img data-src=&#34;https://chiaraina.github.io/more/other/gallery/aikido1_hu31e7ec491f13b73ae6a84899b5f1416b_5284620_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;238&#34; height=&#34;190&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraaina.github.io/more/other/gallery/aikido1.jpg&#34; &gt;
+  &lt;img data-src=&#34;https://chiaraaina.github.io/more/other/gallery/aikido1_hu31e7ec491f13b73ae6a84899b5f1416b_5284620_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;238&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
     
@@ -439,8 +439,8 @@ style=&#34;float: right; margin-bottom: 10px;zoom:15% &#34; /&gt;&lt;/a&gt;&lt;/
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraina.github.io/more/other/gallery/aikido2.jpg&#34; &gt;
-  &lt;img data-src=&#34;https://chiaraina.github.io/more/other/gallery/aikido2_hu7039c265db15b71c85d7db0983f33f8c_1149659_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;287&#34; height=&#34;190&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraaina.github.io/more/other/gallery/aikido2.jpg&#34; &gt;
+  &lt;img data-src=&#34;https://chiaraaina.github.io/more/other/gallery/aikido2_hu7039c265db15b71c85d7db0983f33f8c_1149659_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;287&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
     
@@ -448,8 +448,8 @@ style=&#34;float: right; margin-bottom: 10px;zoom:15% &#34; /&gt;&lt;/a&gt;&lt;/
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraina.github.io/more/other/gallery/aikido3.jpg&#34; &gt;
-  &lt;img data-src=&#34;https://chiaraina.github.io/more/other/gallery/aikido3_hu923d1258958a1f2c6745d378f185810f_814928_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;255&#34; height=&#34;190&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraaina.github.io/more/other/gallery/aikido3.jpg&#34; &gt;
+  &lt;img data-src=&#34;https://chiaraaina.github.io/more/other/gallery/aikido3_hu923d1258958a1f2c6745d378f185810f_814928_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;255&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
     
@@ -457,8 +457,8 @@ style=&#34;float: right; margin-bottom: 10px;zoom:15% &#34; /&gt;&lt;/a&gt;&lt;/
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraina.github.io/more/other/gallery/door.jpg&#34; &gt;
-  &lt;img data-src=&#34;https://chiaraina.github.io/more/other/gallery/door_hua25ce3190e639fbd4b3268902ed11797_6249260_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraaina.github.io/more/other/gallery/door.jpg&#34; &gt;
+  &lt;img data-src=&#34;https://chiaraaina.github.io/more/other/gallery/door_hua25ce3190e639fbd4b3268902ed11797_6249260_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;253&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
     
@@ -466,8 +466,8 @@ style=&#34;float: right; margin-bottom: 10px;zoom:15% &#34; /&gt;&lt;/a&gt;&lt;/
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraina.github.io/more/other/gallery/fall.jpg&#34; &gt;
-  &lt;img data-src=&#34;https://chiaraina.github.io/more/other/gallery/fall_hu7481337ff77d69c8e30d657462e86c6e_310297_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;255&#34; height=&#34;190&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraaina.github.io/more/other/gallery/fall.jpg&#34; &gt;
+  &lt;img data-src=&#34;https://chiaraaina.github.io/more/other/gallery/fall_hu7481337ff77d69c8e30d657462e86c6e_310297_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;255&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
     
@@ -475,8 +475,8 @@ style=&#34;float: right; margin-bottom: 10px;zoom:15% &#34; /&gt;&lt;/a&gt;&lt;/
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraina.github.io/more/other/gallery/maremma.jpg&#34; &gt;
-  &lt;img data-src=&#34;https://chiaraina.github.io/more/other/gallery/maremma_hua7364c278dec344f4100c5a636e3b0bc_293953_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;269&#34; height=&#34;190&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraaina.github.io/more/other/gallery/maremma.jpg&#34; &gt;
+  &lt;img data-src=&#34;https://chiaraaina.github.io/more/other/gallery/maremma_hua7364c278dec344f4100c5a636e3b0bc_293953_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;269&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
     
@@ -484,8 +484,8 @@ style=&#34;float: right; margin-bottom: 10px;zoom:15% &#34; /&gt;&lt;/a&gt;&lt;/
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraina.github.io/more/other/gallery/roses.jpg&#34; &gt;
-  &lt;img data-src=&#34;https://chiaraina.github.io/more/other/gallery/roses_hue996207bfb93573e0c79ddeeb7b4b12e_2939530_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;409&#34; height=&#34;190&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraaina.github.io/more/other/gallery/roses.jpg&#34; &gt;
+  &lt;img data-src=&#34;https://chiaraaina.github.io/more/other/gallery/roses_hue996207bfb93573e0c79ddeeb7b4b12e_2939530_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;409&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
     
@@ -493,8 +493,8 @@ style=&#34;float: right; margin-bottom: 10px;zoom:15% &#34; /&gt;&lt;/a&gt;&lt;/
     
     
     
-  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraina.github.io/more/other/gallery/trees_big2.jpg&#34; &gt;
-  &lt;img data-src=&#34;https://chiaraina.github.io/more/other/gallery/trees_big2_huc17395fdf4a0e8d97c3aca8cc2ac93ba_5948242_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;271&#34; height=&#34;190&#34;&gt;
+  &lt;a data-fancybox=&#34;gallery-gallery&#34; href=&#34;https://chiaraaina.github.io/more/other/gallery/trees_big2.jpg&#34; &gt;
+  &lt;img data-src=&#34;https://chiaraaina.github.io/more/other/gallery/trees_big2_huc17395fdf4a0e8d97c3aca8cc2ac93ba_5948242_0x190_resize_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;271&#34; height=&#34;190&#34;&gt;
   &lt;/a&gt;
   
 
@@ -505,25 +505,25 @@ style=&#34;float: right; margin-bottom: 10px;zoom:15% &#34; /&gt;&lt;/a&gt;&lt;/
     
     <item>
       <title>Frustration and anger in the Ultimatum game: An experiment</title>
-      <link>https://chiaraina.github.io/publication/abg/</link>
+      <link>https://chiaraaina.github.io/publication/abg/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/publication/abg/</guid>
+      <guid>https://chiaraaina.github.io/publication/abg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tailored Stories</title>
-      <link>https://chiaraina.github.io/publication/tailored/</link>
+      <link>https://chiaraaina.github.io/publication/tailored/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/publication/tailored/</guid>
+      <guid>https://chiaraaina.github.io/publication/tailored/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Slides</title>
-      <link>https://chiaraina.github.io/slides/example/</link>
+      <link>https://chiaraaina.github.io/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/slides/example/</guid>
+      <guid>https://chiaraaina.github.io/slides/example/</guid>
       <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 

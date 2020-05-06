@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chiara Aina</title>
-    <link>https://chiaraina.github.io/author/chiara-aina/</link>
-      <atom:link href="https://chiaraina.github.io/author/chiara-aina/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://chiaraaina.github.io/author/chiara-aina/</link>
+      <atom:link href="https://chiaraaina.github.io/author/chiara-aina/index.xml" rel="self" type="application/rss+xml" />
     <description>Chiara Aina</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://chiaraina.github.io/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_512x512_fill_lanczos_center_2.png</url>
+      <url>https://chiaraaina.github.io/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_512x512_fill_lanczos_center_2.png</url>
       <title>Chiara Aina</title>
-      <link>https://chiaraina.github.io/author/chiara-aina/</link>
+      <link>https://chiaraaina.github.io/author/chiara-aina/</link>
     </image>
     
     <item>
       <title>Introduction to Bayesian Updating</title>
-      <link>https://chiaraina.github.io/more/tutorial_bayes/</link>
+      <link>https://chiaraaina.github.io/more/tutorial_bayes/</link>
       <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/more/tutorial_bayes/</guid>
+      <guid>https://chiaraaina.github.io/more/tutorial_bayes/</guid>
       <description>&lt;p style=&#34;font-size:80%&#34;&gt;Inspired by a lecture of &lt;a href=&#34;https://www.cns.nyu.edu/malab/&#34;&gt;Prof. Wei Ji Ma &lt;/a&gt;, I wrote this introduction to Bayesian updating. (Behavioral Theory, Fall 2019). &lt;/p&gt;
 &lt;h2 id=&#34;what-you-know-already-about-bayes-rule&#34;&gt;What you know already about Bayes&amp;rsquo; rule&lt;/h2&gt;
 &lt;p&gt;Bayes&amp;rsquo; Theorem shows the relationship between a conditional probability and its counterpart.
@@ -329,17 +329,17 @@ The host opens door No.3. Now we know that $ \Pr(C_3 \mid 0_3) = 0 $ (posterior 
     
     <item>
       <title>Frustration and anger in the Ultimatum game: An experiment</title>
-      <link>https://chiaraina.github.io/publication/abg/</link>
+      <link>https://chiaraaina.github.io/publication/abg/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/publication/abg/</guid>
+      <guid>https://chiaraaina.github.io/publication/abg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tailored Stories</title>
-      <link>https://chiaraina.github.io/publication/tailored/</link>
+      <link>https://chiaraaina.github.io/publication/tailored/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/publication/tailored/</guid>
+      <guid>https://chiaraaina.github.io/publication/tailored/</guid>
       <description></description>
     </item>
     

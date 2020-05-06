@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Chiara Aina</title>
-    <link>https://chiaraina.github.io/author/</link>
-      <atom:link href="https://chiaraina.github.io/author/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://chiaraaina.github.io/author/</link>
+      <atom:link href="https://chiaraaina.github.io/author/index.xml" rel="self" type="application/rss+xml" />
     <description>Chiara Aina</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
-      <url>https://chiaraina.github.io/author/avatar_hu94a2b13630cee169448158e3ce3cd717_604248_270x270_fill_q90_lanczos_center.jpg</url>
+      <url>https://chiaraaina.github.io/author/avatar_hu94a2b13630cee169448158e3ce3cd717_604248_270x270_fill_q90_lanczos_center.jpg</url>
       <title>Chiara Aina</title>
-      <link>https://chiaraina.github.io/author/</link>
+      <link>https://chiaraaina.github.io/author/</link>
     </image>
     
   </channel>

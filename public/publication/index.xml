@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Research | Chiara Aina</title>
-    <link>https://chiaraina.github.io/publication/</link>
-      <atom:link href="https://chiaraina.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://chiaraaina.github.io/publication/</link>
+      <atom:link href="https://chiaraaina.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Research</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 19 Apr 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://chiaraina.github.io/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_512x512_fill_lanczos_center_2.png</url>
+      <url>https://chiaraaina.github.io/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_512x512_fill_lanczos_center_2.png</url>
       <title>Research</title>
-      <link>https://chiaraina.github.io/publication/</link>
+      <link>https://chiaraaina.github.io/publication/</link>
     </image>
     
     <item>
       <title>Frustration and anger in the Ultimatum game: An experiment</title>
-      <link>https://chiaraina.github.io/publication/abg/</link>
+      <link>https://chiaraaina.github.io/publication/abg/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/publication/abg/</guid>
+      <guid>https://chiaraaina.github.io/publication/abg/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tailored Stories</title>
-      <link>https://chiaraina.github.io/publication/tailored/</link>
+      <link>https://chiaraaina.github.io/publication/tailored/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://chiaraina.github.io/publication/tailored/</guid>
+      <guid>https://chiaraaina.github.io/publication/tailored/</guid>
       <description></description>
     </item>
     
