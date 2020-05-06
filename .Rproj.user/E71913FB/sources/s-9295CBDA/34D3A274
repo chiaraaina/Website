@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1588783807660.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "34D3A274",
+    "lastKnownWriteTime" : 1588770743,
+    "last_content_update" : 1588770743,
+    "path" : "C:/Users/caina/Dropbox/Website/config.toml",
+    "project_path" : "config.toml",
+    "properties" : {
+        "cursorPosition" : "12,0",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "toml"
+}

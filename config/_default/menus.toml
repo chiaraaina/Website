@@ -1,0 +1,43 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+
+[[main]]
+  name = "research"
+  url = "#publications"
+  weight = 10
+
+[[main]]
+  name = "vita"
+  url = "#vita"
+  weight = 20
+  
+[[main]]
+  name = "more"
+  identifier = "more"
+  url = "more/"
+  weight = 30
+
+[[main]]
+  name = "bayesian update"
+  parent = "more"
+  URL = "more/tutorial_bayes"
+  weight = 1
+
+[[main]]
+  name = "other"
+  parent = "more"
+  URL = "more/other"
+  weight = 2
+
+
+
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+# [[main]]
+#    name = "CV"
+#    url = "files/cv.pdf"
+#    weight = 70

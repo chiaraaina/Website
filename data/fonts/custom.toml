@@ -1,0 +1,12 @@
+# Font style metadata
+name = "custom"
+
+# Optional Google font URL
+google_fonts = "Nunito:800,600|Nunito:400,400italic,700|Roboto+Mono"
+
+# Font families
+heading_font = "Nunito"
+body_font = "Nunito"
+nav_font = "Nunito"
+
+mono_font = "Roboto Mono"
