@@ -1,0 +1,1050 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Inspired by a lecture of Prof. Wei Ji Ma , I wrote this introduction to Bayesian updating. (Behavioral Theory, Fall 2019). What you know already about Bayes&rsquo; rule Bayes&rsquo; Theorem shows the relationship between a conditional probability and its counterpart.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://chiaraina.github.io/more/tutorial_bayes/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#C5EC5A">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:800,600%7CNunito:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://chiaraina.github.io/more/tutorial_bayes/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Chiara Aina">
+  <meta property="og:url" content="https://chiaraina.github.io/more/tutorial_bayes/">
+  <meta property="og:title" content="Introduction to Bayesian Updating | Chiara Aina">
+  <meta property="og:description" content="Inspired by a lecture of Prof. Wei Ji Ma , I wrote this introduction to Bayesian updating. (Behavioral Theory, Fall 2019). What you know already about Bayes&rsquo; rule Bayes&rsquo; Theorem shows the relationship between a conditional probability and its counterpart."><meta property="og:image" content="https://chiaraina.github.io/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://chiaraina.github.io/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-05-05T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2020-05-05T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Introduction to Bayesian Updating | Chiara Aina</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Chiara Aina</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Chiara Aina</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>research</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#vita"><span>vita</span></a>
+        </li>
+
+        
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>more</span><span class="caret"></span>
+          </a>
+          <div class="dropdown-menu">
+            
+              <a class="dropdown-item" href="/more/tutorial_bayes"><span>bayesian update</span></a>
+            
+              <a class="dropdown-item" href="/more/other"><span>other</span></a>
+            
+          </div>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Introduction to Bayesian Updating</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span>Chiara Aina</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 5, 2020
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p style="font-size:80%">Inspired by a lecture of <a href="https://www.cns.nyu.edu/malab/">Prof. Wei Ji Ma </a>, I wrote this introduction to Bayesian updating. (Behavioral Theory, Fall 2019). </p>
+<h2 id="what-you-know-already-about-bayes-rule">What you know already about Bayes&rsquo; rule</h2>
+<p>Bayes&rsquo; Theorem shows the relationship between a conditional probability and its counterpart.
+Consider two events  $A $ and $ B $, Bayes&rsquo; theorem states that, if $ P(B) \ne 0 $,<br>
+$$ 
+P(A \mid B)  = \frac{P(B \mid A) P(A)}{P(B)}.
+$$</p>
+<ul>
+<li>$ P(A) $ and $ P(B) $ are the probabilities of observing $  A $ and $ B  $.</li>
+<li>$ P(A \mid B) $ is a conditional probability: the probability of event $ A $ occurring given that $ B  $ occurs.</li>
+<li>$ P(B\mid A) $ is also a conditional probability: the probability of event $ B $ occurring given that $ A $ occurs.</li>
+</ul>
+<h3 id="warm-up-exercise">Warm-up Exercise</h3>
+<p>You come back from a vacation in an exotic place. You decide to go to the doctor to get tested for a disease common in that exotic area. But you know that medical results are not always accurate. Given the positive test result, what is the probability that you actually have this disease?</p>
+<p>To formalize, denote the event that a patient has the disease as $D$ and the event the patient is healthy as $H$; let the event that the test turned out positive $+$ or negative $-$ for the disease. Bayes&rsquo; Theorem helps you to compute the probability $ \Pr(D \mid +) $ given some other information:
+To determine the answer to this question you need to know: (i) incidence of the disease, that is the \emph{prior} probability of the disease in the population, $ \Pr(D)$ ; (ii) test accuracy:</p>
+<ul>
+<li>probability of a false positive, $ \Pr(+ \mid H)$: how often does it report a positive result for someone without the disease?</li>
+<li>probability of a false negative, $ \Pr(- \mid D)$: how often does the test report a negative result for a sick patient?</li>
+</ul>
+<p>Assume $ \Pr(D) = 10\%, \Pr(+ \mid H) = 5\%, $ and $ \Pr(- \mid D) = 20\% $.</p>
+<p style=";color: #C5EC5A">(a) Draw in the figure the probabilities.</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<div class="row"  style="align-content: center;">
+    <div style="float:center;margin-right:5px;">
+        <img src="priors.png" height="400" width="400"  />
+        <p style="text-align:center;">Priors</p>
+    </div>
+    <div style="float:center;margin-right:5px;">
+        <img class="middle-img" src="test.png" height="400" width="400" />
+        <p style="text-align:center;">Test Accuracy</p>
+    </div>
+</div>
+</details>
+<br>
+<p>How do you calculate the <em>posterior</em> probability of having the disease given a positive result of the test? Use Bayes&rsquo; Theorem: $ \Pr(D \mid + ) = \frac{\Pr(+ \mid D) \Pr(D)}{\Pr(+)} $!</p>
+<p>First, we determine the overall probability of a positive result (the denominator).  To do so, we use the Law of Total Probability:  for every event $ A $ and finite set of events $ B_n $, $ \Pr(A)  = \sum_n \Pr (A \cap B_n) = \sum_n \Pr(A \mid B_n) \Pr(B_n)$.</p>
+<p style=";color: #C5EC5A">(b) Calculate the probability of a positive result and the probability of a negative result.</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>Use the Total Law of Probability: $	 P(+) = P(+ \mid H) P(H) + P(+ \mid D) P(D) = 5\%  \times 90\% + 80\% \times 10\%  = 12.5\%. $  Then,  $ \ P(-)  = 1 - 12.5\% = 87.5\% $.</p>
+</details>
+<br>
+You are ready to calculate the posterior probabilities.
+<p style=";color: #C5EC5A">(c) Calculate the probability of being sick once observed a positive result, $ P(D \mid +) $.</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>$$ \Pr(D \mid + )	= \frac{P(+ \mid D)  P(D)}{P(+)} = \frac{80\% \times 10\%}{12.5\%} = 64\% $$
+There is a 64% chance that someone with a positive test is actually sick.</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(d) Which other probabilities can you recover from this? Which one you need to calculate by Bayes' Rule?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>We can directly recover $\Pr(H \mid +) = 1- \Pr(D \mid + ) = 36\%.$ One need to calculate the conditional probability on a negative test by Bayes&rsquo; Rule.</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(e) Calculate the remaining conditional probabilities </p>
+<details>
+<summary> <i style=";color: rgba(255,255,255,0.54)"> solution  </i> </summary>
+<p>$$ \Pr(D \mid - ) = \frac{\Pr(- \mid D) \Pr(D)}{\Pr(-)} = \frac{20\% \times 10\%}{ 87.5\% } = 2.3\% \<br>
+\Pr(H \mid -)  = 1 - 2.3\% =  97.7 $$</p>
+<p>To summarize:</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Posterior</th>
+    <th class="tg-0pky">Negative</th>
+    <th class="tg-0pky">Positive</th>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Healthy</td>
+    <td class="tg-0pky">97.7%</td>
+    <td class="tg-0pky">36%</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Disease</td>
+    <td class="tg-0pky">2.3%</td>
+    <td class="tg-0pky">64%</td>
+  </tr>
+</table>
+</details>
+<br>
+<p style=";color: #C5EC5A">(f) In the figure 
+<a href="https://seeing-theory.brown.edu/bayesian-inference/index.html"> (source) </a> assign the following label to the appropriate quantities: priors, test accuracy, probability of the results, and posteriors.
+</p>
+<img src="test_sample.png" height="400" width="400"  />
+<details>
+<summary> <i> solution  </i> </summary>
+<ul>
+<li>Priors, $ \Pr(D) $ and $ \Pr(H) $: respectively, red dots and blue dots in the population;</li>
+<li>Test accuracy, $ \Pr(+ \mid H) $ and $ \Pr(- \mid H) $: respectively, blue bar and red bar in the test line;</li>
+<li>Probability of result, $ \Pr(+) $ and $ \Pr(-) $: respectively, all dots in the right column and all dots in the left column;</li>
+<li>Posteriors:
+<ul>
+<li>$ \Pr(D \mid + ) $: all red dots in the right column;</li>
+<li>$ \Pr(H \mid + ) $: all blue  dots in the right column;</li>
+<li>$ \Pr(D \mid - ) $: all red dots in the left column;</li>
+<li>$ \Pr(H \mid - ) $: all blue  dots in the left column.</li>
+</ul>
+</li>
+</ul>
+</details>
+<br>
+<hr>
+<h2 id="more-on-bayes-theorem">More on Bayes&rsquo; Theorem</h2>
+<p>One of the most important application of Bayes&rsquo; Theorem is inference: it allows us to put probability values on unknown parameter. Consider a random variable $x$ which is distributed conditional on an unknown parameter $ \theta \in \Theta $. You  observe some realizations $ x_{obs} $. Using these observations, we are interested in learning more about the true value of $ \theta $. One interpretation is that this information tells you something about the model behind  data.</p>
+<p>To make this inference, you need to start from a <em>prior distribution</em> on the unknown parameter $\theta$, that is $ \Pr(\theta) $ for each value $ \theta \in \Theta $. This summarize the observer&rsquo;s available information (or lack of information) about the parameter. Moreover, you need a <em>likelihood function</em> that tells you how to interpret the observations, absent prior knowledge.  Formally, it is equal to the probability of the observed data under a parameter realization: $ \Pr (x  \mid \theta ).$</p>
+<div style="float:center;">
+        <img src="conditional.png" height="400" width="400"  />
+        <p style="text-align:center;">Example of conditional distribution</p>
+</div>
+<p>However, since the parameter is unknown and we can fix $ x $ using $ x_{obs} $, we treat the likelihood as a function of $ \theta $: it expresses the plausibility of different parameter values for a given sample of data. A Bayesian observer computes a posterior distribution of $ \theta  $ given the observed value. In general, the posterior $\Pr(\theta \mid x_{obs})$ is the probability density function over the unknown $\theta$ given the observations $x_{obs}$, calculated by Bayes&rsquo; rule as
+$$ \Pr(\theta  \mid x_{obs}) = \frac{ \Pr (x_{obs} \mid \theta)\Pr(\theta)}{\Pr(x_{obs})} $$</p>
+<p>Bayes&rsquo; Theorem updates the information on $\theta$ by extracting the information on $\theta$ contained in the observation $x_{obs}$. So we can use this result to choose the best among a set of hypotheses as follows: each possible value of the parameter is a hypothesis, and the likelihood of that  is the observer&rsquo;s belief that the observations would arise under that hypothesis; priors and posteriors are both belief distributions whose arguments are hypothesis; we should select the hypothesis with the highest posterior to make our choices.</p>
+<p>Last, it is very useful to note that the posterior is proportional to the product of prior and likelihood (denominator is a normalization factor independent of $\theta$):
+$$ \Pr(\theta  \mid x_{obs}) \propto \Pr (x_{obs} \mid \theta)\Pr(\theta). $$</p>
+<p style=";color: #C5EC5A"> Go back to point (a) of the previous exercise. Draw the four products of prior and  likelihood and check that it is suggestive of the final posterior.</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<img src="product.png" height="400" width="400"  />
+</details>
+<br>
+<hr>
+<h3 id="exercise-competing-hypotheses">Exercise: Competing hypotheses</h3>
+<p>
+<a href="https://www.youtube.com/watch?v=KMl5l6mOySU" target="_blank" rel="noopener"><img src="balls.jpg" height="400" width="400"  /></a></p>
+<p>You observe bouncy balls all moving downward. You only consider two possible scenarios:</p>
+<ul>
+<li><strong>Scenario 1:</strong> all balls are part of the same object, thus they always move together. They move together either up or down, each with probability 0.5.</li>
+<li><strong>Scenario 2:</strong> Each ball is an object by itself and independently moves either up or down, each with probability 0.5.</li>
+</ul>
+<p>Considering only four bouncy balls, you want to learn which of the following story is true. Note that in this example you only care about direction, whereas speed and position do not play a role in this problem.</p>
+<h4 id="likelihoods">Likelihoods</h4>
+<p>The likelihood of a scenario is the probability of the observations under that scenario: $ \Pr( obs \mid Scenario ).$</p>
+<p style=";color: #C5EC5A">(a) What is the likelihood of Scenario 1?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>$\Pr(obs \mid Scenario 1) = 0.5 = 1/2.$</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(b) What is the likelihood of Scenario 2?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>$ \Pr(obs \mid Scenario 2) = (0.5)^{4} = 1/16.$</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(c) Do the likelihoods of the scenarios sum to one?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>No, there is no law of probability that says that probabilities of same observations under different scenarios sum up to one.</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(d) What is wrong with the phrase "the likelihood of the observations"?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>One cannot speak about the likelihood of something without an considering a scenario to condition on. Remember that a likelihood is a conditional probability.</p>
+</details>
+<br>
+<h4 id="priors">Priors</h4>
+<p>In many applications of interest, priors are not well-defined. In this examples, assume that Scenario 1 occurs twice as often as Scenario 2. You can use these frequencies of occurrence as prior probabilities, reflecting expectations in the absence of specific observations.</p>
+<p style=";color: #C5EC5A">(e) What are the prior probabilities of Scenario 1 and 2?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>$\Pr(Scenario 1) = 2/3, \quad \Pr(Scenario 2)= 1/3. $</p>
+</details>
+<br>
+<h4 id="normalization-factor">Normalization Factor</h4>
+<p>As an intermediate step, you need to calculate the product of the likelihood of a scenario multiplied by its prior probability: $ \Pr(obs \mid Scenario) \times \Pr(Scenario).$</p>
+<p>These are used to calculate the numerator in Bayes&rsquo; rule.</p>
+<p style=";color: #C5EC5A">(f) Calculate this product for Scenario 1 and 2?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>$ \Pr(obs \mid Scenario 1) \times \Pr(Scenario1 ) &amp;= 2/3 \times 1/2 = 1/3$</p>
+<p>$ \Pr(obs \mid Scenario 2) \times \Pr(Scenario2 ) &amp; = 1/3 \times 1/16 = 1/48$</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(g) Sum the two products. Is it equal to one?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>No: $ \quad  \Pr(obs \mid Scenario 1) \times \Pr(Scenario1 ) +  \Pr(obs \mid Scenario 2) \times \Pr(Scenario2 ) = 1/3 + 1/48 = 17/48 $.</p>
+</details>
+<br>
+<p>The normalization factor in Bayes&rsquo; Rule is the overall probability of the observations and it is sum of the two products, as calculated above. This is because posteriors have to sum up to one.</p>
+<h4 id="posteriors">Posteriors</h4>
+<p style=";color: #C5EC5A">(h) Divide the product of prior and likelihood by the normalization factor for each scenario</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>$$	\Pr(Scenario 1 \mid obs) = \frac{\Pr(obs \mid Scenario 1) \times \Pr(Scenario1 ) }{\Pr(obs \mid Scenario 1) \times \Pr(Scenario1 )  + \Pr(obs \mid Scenario 2) \times \Pr(Scenario2 )} 
+= \frac{1/3}{17/48}=\frac{1}{3} \times \frac{48}{17}=  \frac{16}{17}. $$</p>
+<p>$$ \Pr(Scenario 2 \mid obs) = \frac{\Pr(obs \mid Scenario 2) \times \Pr(Scenario 2 ) }{\Pr(obs \mid Scenario 1) \times \Pr(Scenario1 )  + \Pr(obs \mid Scenario 2) \times \Pr(Scenario2 )} = \frac{1/48}{17/48}= \frac{1}{48} \times \frac{48}{17}= \frac{1}{17}.$$</p>
+</details>
+<br>
+<p>You have just applied Bayes&rsquo; rule to obtain the posteriors for each scenario. Now you want to pick scenario with the highest posterior.</p>
+<p style=";color: #C5EC5A">(i) Which scenario has the highest posterior?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>Scenario 1 is more likely given our observations. 
+Indeed, the brain has a tendency to group the dots together because of their common motion, and perceive them as a single object. This is called <a href="https://en.wikipedia.org/wiki/Gestalt_psychology#Law_of_Common_Fate">Gestalt principle of common fate</a>.</p>
+<p>You have just explained a well-known phenomena by Bayes inference!</p>
+</details>
+<br>
+<hr>
+<h3 id="exercise-multiple-inputs">Exercise: Multiple Inputs</h3>
+<p>Consider the following model: your utility of breakfast is given by the product of quality coffee and the quality of the cake you consume:
+$$ U(\mbox{breakfast})= \mbox{quality of cake} \times \mbox{quality of coffee}. $$
+Assume that the quality is evaluated between 0 and 1.</p>
+<p>This morning you had a very bad breakfast, with utility of breakfast today 0.2. You want to understand the cause of that. You are better at assessing separately the quality of coffee, but not the quality of cake.</p>
+<p style=";color: #C5EC5A">(a) Suppose further that you hypothesized the quality of the coffee to be 1 (very good coffee). Under this hypothesis, calculate what the quality of the cake must have been.</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>$$ \underbrace{U(\mbox{breakfast})}_{0.2} = \mbox{quality of cake} \times \underbrace{\mbox{quality of coffee}}_1 $$</p>
+<p>So the quality of cake must have been 0.2.</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(b) What if you suppose that  the quality of coffee to be 0.4?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>$$ \underbrace{U(\mbox{breakfast})}<em>{0.2} = \mbox{quality of cake} \times \underbrace{\mbox{quality of coffee}}</em>{0.4}$$</p>
+<p>So the quality of cake must have been 0.5.</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(c) Why utility of breakfast provides ambiguous information about quality of the cake?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>Because quality of coffee modulates the utility of breakfast together with the quality of cake and you do not have accurate information on that.</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(d) By going through a few more examples like the ones in (a) and (b), draw on the two-variable likelihood diagram all combinations of hypothesized  quality of coffee and hypothesized quality of cake that could have produced the utility of breakfast equal to 0.2. </p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p><img src="likelihood1.png" height="400" width="400"  /></p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(e) Suppose that you have a strong prior that quality of coffee is uniformly distributed between 0.2 and 0.4 for sure. In the two-variable prior diagram, shade the area corresponding to the support of the prior.</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p><img src="prior2.png" height="400" width="400"  /></p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(f) Can we infer something about the quality of cake? Finally draw where the posterior probability is high. </p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p><img src="posterior3.png" height="400" width="400"  /></p>
+<p>You can just restricted your posterior. If you believe that the quality of coffee is between 0.2 and 0.5, it means that the quality of cake was above 0.5: the cake was good!</p>
+</details>
+<br>
+<hr>
+<h2 id="puzzle-monty-hall-paradox">Puzzle: Monty Hall Paradox</h2>
+<p>You&rsquo;re on a TV show. You&rsquo;re given the choice of three doors: behind one door is a car (prize); behind the others, goats (non-prize). Which one would you pick? Suppose you pick door No.1. Now the host, who knows what&rsquo;s behind the doors, does not open the one you selected but opens another door, say No. 3, which has a goat. Then the host says to you, ``Do you want to pick door No. 2?&rdquo;</p>
+<p><a href="https://www.youtube.com/watch?v=cXqDIFUB7YU">Does it matter if you switch?</a> Yes! This is a famous counter-intuitive problem. Let&rsquo;s use Bayes&rsquo; Rule to solve it.</p>
+<p>Denote the event &ldquo;door $ i $ hides a car&rdquo; with $ C_i $.</p>
+<p style=";color: #C5EC5A">(a)
+When the host of the TV show gives you the choice to pick a door, what is your prior probability of finding the car behind each door?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>Since you do not have any information, you believe each door is equally likely to hide the car:
+$ \Pr(C_1) = \Pr(C_2) = \Pr(C_3) = \frac{1}{3}.$</p>
+</details>
+<br>
+<p>Denote the event &ldquo;door $ i $ is chosen by the guest&rdquo; with $ X_i $ and the event &ldquo;door $ i $  is opened&rdquo; with $ O_i $. Your priors are unchanged after the host opens a door, by independence between the event $ C_i $ and $ X_i $ (the player doesn&rsquo;t know where is the car in order to make a choice). This implies that $ \Pr(C_i, X_i)  = \Pr(C_i) \times \Pr(X_i)$.</p>
+<p>Initially you have chosen door No. 1. Now the host will open a door that does not hide the car.</p>
+<p style=";color: #C5EC5A">(b) What is the probability that the host will open door No. 3 in the following cases?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<ul>
+<li>The car is behind door No. 1: $ \Pr(O_3 \mid X_1, C_1) = \frac{1}{2}.$</li>
+<li>The car is behind door No. 2: $ \Pr(O_3 \mid X_1, C_2) = 1.$</li>
+<li>The car is behind door No. 3: $ \Pr(O_3 \mid X_1, C_3) = 0.$</li>
+</ul>
+</details>
+<br>
+<p style=";color: #C5EC5A">(c) What is the overall probability that the host will open door no.3?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>Using total law of probability:
+$$ 	\Pr(O_3 \mid X_1) = \Pr(O_3 \mid X_1, C_1) \times \Pr(C_1) + \Pr(O_3 \mid X_1, C_2) \times \Pr(C_2) + \Pr(O_3 \mid X_1, C_3) \times \Pr(C_3) = \frac{1}{2} \times \frac{1}{3} + 1 \times \frac{1}{3} + 0 \times \frac{1}{3} = \frac{1}{2}.$$</p>
+</details>
+<br>
+The host opens door No.3. Now we know that $ \Pr(C_3 \mid 0_3) = 0 $ (posterior probability).
+<p style=";color: #C5EC5A">(d) Use Bayes' rule to calculate the conditional probability that the car is behind the door you chose, given  that door No.3 was open: $ \Pr(C_1 \mid X_1, O_3) $. </p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>$$\Pr(C_1 \mid X_1, O_3) = \frac{\Pr(O_3 \mid X_1, C_1) \times \Pr(C_1, X_1)}{\Pr(X_1, O_3)}  = \frac{\Pr(O_3 \mid X_1, C_1) \times \Pr(C_1) \times \Pr(X_1)}{\Pr(O_3 \mid X_1)\times \Pr(X_1)}  = \frac{1/2 \times 1/3 \times 1}{1/2 \times 1} = \frac{1}{3} $$</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(e) Calculate the conditional probability that the car is behind the other door.</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>This is just the complement of $\Pr(C_2 \mid X_1, O_3)  $, since door No.3 was open.</p>
+<p>$$\Pr(C_2 \mid X_1, O_3) = 1- \Pr(C_2 \mid X_1, O_3) = \frac{2}{3} $$</p>
+</details>
+<br>
+<p style=";color: #C5EC5A">(f) Should you switch door?</p>
+<details>
+<summary> <i> solution  </i> </summary>
+<p>Yes!</p>
+</details>
+<br>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

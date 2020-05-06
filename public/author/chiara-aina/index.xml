@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chiara Aina</title>
+    <link>https://chiaraina.github.io/author/chiara-aina/</link>
+      <atom:link href="https://chiaraina.github.io/author/chiara-aina/index.xml" rel="self" type="application/rss+xml" />
+    <description>Chiara Aina</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://chiaraina.github.io/images/icon_hu7cfc2857fa252eed21021c4e6afd66ab_22259_512x512_fill_lanczos_center_2.png</url>
+      <title>Chiara Aina</title>
+      <link>https://chiaraina.github.io/author/chiara-aina/</link>
+    </image>
+    
+    <item>
+      <title>Introduction to Bayesian Updating</title>
+      <link>https://chiaraina.github.io/more/tutorial_bayes/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://chiaraina.github.io/more/tutorial_bayes/</guid>
+      <description>&lt;p style=&#34;font-size:80%&#34;&gt;Inspired by a lecture of &lt;a href=&#34;https://www.cns.nyu.edu/malab/&#34;&gt;Prof. Wei Ji Ma &lt;/a&gt;, I wrote this introduction to Bayesian updating. (Behavioral Theory, Fall 2019). &lt;/p&gt;
+&lt;h2 id=&#34;what-you-know-already-about-bayes-rule&#34;&gt;What you know already about Bayes&amp;rsquo; rule&lt;/h2&gt;
+&lt;p&gt;Bayes&amp;rsquo; Theorem shows the relationship between a conditional probability and its counterpart.
+Consider two events  $A $ and $ B $, Bayes&amp;rsquo; theorem states that, if $ P(B) \ne 0 $,&lt;br&gt;
+$$ 
+P(A \mid B)  = \frac{P(B \mid A) P(A)}{P(B)}.
+$$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$ P(A) $ and $ P(B) $ are the probabilities of observing $  A $ and $ B  $.&lt;/li&gt;
+&lt;li&gt;$ P(A \mid B) $ is a conditional probability: the probability of event $ A $ occurring given that $ B  $ occurs.&lt;/li&gt;
+&lt;li&gt;$ P(B\mid A) $ is also a conditional probability: the probability of event $ B $ occurring given that $ A $ occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;warm-up-exercise&#34;&gt;Warm-up Exercise&lt;/h3&gt;
+&lt;p&gt;You come back from a vacation in an exotic place. You decide to go to the doctor to get tested for a disease common in that exotic area. But you know that medical results are not always accurate. Given the positive test result, what is the probability that you actually have this disease?&lt;/p&gt;
+&lt;p&gt;To formalize, denote the event that a patient has the disease as $D$ and the event the patient is healthy as $H$; let the event that the test turned out positive $+$ or negative $-$ for the disease. Bayes&amp;rsquo; Theorem helps you to compute the probability $ \Pr(D \mid +) $ given some other information:
+To determine the answer to this question you need to know: (i) incidence of the disease, that is the \emph{prior} probability of the disease in the population, $ \Pr(D)$ ; (ii) test accuracy:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;probability of a false positive, $ \Pr(+ \mid H)$: how often does it report a positive result for someone without the disease?&lt;/li&gt;
+&lt;li&gt;probability of a false negative, $ \Pr(- \mid D)$: how often does the test report a negative result for a sick patient?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Assume $ \Pr(D) = 10\%, \Pr(+ \mid H) = 5\%, $ and $ \Pr(- \mid D) = 20\% $.&lt;/p&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(a) Draw in the figure the probabilities.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;div class=&#34;row&#34;  style=&#34;align-content: center;&#34;&gt;
+    &lt;div style=&#34;float:center;margin-right:5px;&#34;&gt;
+        &lt;img src=&#34;priors.png&#34; height=&#34;400&#34; width=&#34;400&#34;  /&gt;
+        &lt;p style=&#34;text-align:center;&#34;&gt;Priors&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div style=&#34;float:center;margin-right:5px;&#34;&gt;
+        &lt;img class=&#34;middle-img&#34; src=&#34;test.png&#34; height=&#34;400&#34; width=&#34;400&#34; /&gt;
+        &lt;p style=&#34;text-align:center;&#34;&gt;Test Accuracy&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p&gt;How do you calculate the &lt;em&gt;posterior&lt;/em&gt; probability of having the disease given a positive result of the test? Use Bayes&amp;rsquo; Theorem: $ \Pr(D \mid + ) = \frac{\Pr(+ \mid D) \Pr(D)}{\Pr(+)} $!&lt;/p&gt;
+&lt;p&gt;First, we determine the overall probability of a positive result (the denominator).  To do so, we use the Law of Total Probability:  for every event $ A $ and finite set of events $ B_n $, $ \Pr(A)  = \sum_n \Pr (A \cap B_n) = \sum_n \Pr(A \mid B_n) \Pr(B_n)$.&lt;/p&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(b) Calculate the probability of a positive result and the probability of a negative result.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;Use the Total Law of Probability: $	 P(+) = P(+ \mid H) P(H) + P(+ \mid D) P(D) = 5\%  \times 90\% + 80\% \times 10\%  = 12.5\%. $  Then,  $ \ P(-)  = 1 - 12.5\% = 87.5\% $.&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+You are ready to calculate the posterior probabilities.
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(c) Calculate the probability of being sick once observed a positive result, $ P(D \mid +) $.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;$$ \Pr(D \mid + )	= \frac{P(+ \mid D)  P(D)}{P(+)} = \frac{80\% \times 10\%}{12.5\%} = 64\% $$
+There is a 64% chance that someone with a positive test is actually sick.&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(d) Which other probabilities can you recover from this? Which one you need to calculate by Bayes&#39; Rule?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;We can directly recover $\Pr(H \mid +) = 1- \Pr(D \mid + ) = 36\%.$ One need to calculate the conditional probability on a negative test by Bayes&amp;rsquo; Rule.&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(e) Calculate the remaining conditional probabilities &lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i style=&#34;;color: rgba(255,255,255,0.54)&#34;&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;$$ \Pr(D \mid - ) = \frac{\Pr(- \mid D) \Pr(D)}{\Pr(-)} = \frac{20\% \times 10\%}{ 87.5\% } = 2.3\% \&lt;br&gt;
+\Pr(H \mid -)  = 1 - 2.3\% =  97.7 $$&lt;/p&gt;
+&lt;p&gt;To summarize:&lt;/p&gt;
+&lt;style type=&#34;text/css&#34;&gt;
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+&lt;/style&gt;
+&lt;table class=&#34;tg&#34;&gt;
+  &lt;tr&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Posterior&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Negative&lt;/th&gt;
+    &lt;th class=&#34;tg-0pky&#34;&gt;Positive&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Healthy&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;97.7%&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;36%&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;Disease&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;2.3%&lt;/td&gt;
+    &lt;td class=&#34;tg-0pky&#34;&gt;64%&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(f) In the figure 
+&lt;a href=&#34;https://seeing-theory.brown.edu/bayesian-inference/index.html&#34;&gt; (source) &lt;/a&gt; assign the following label to the appropriate quantities: priors, test accuracy, probability of the results, and posteriors.
+&lt;/p&gt;
+&lt;img src=&#34;test_sample.png&#34; height=&#34;400&#34; width=&#34;400&#34;  /&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;Priors, $ \Pr(D) $ and $ \Pr(H) $: respectively, red dots and blue dots in the population;&lt;/li&gt;
+&lt;li&gt;Test accuracy, $ \Pr(+ \mid H) $ and $ \Pr(- \mid H) $: respectively, blue bar and red bar in the test line;&lt;/li&gt;
+&lt;li&gt;Probability of result, $ \Pr(+) $ and $ \Pr(-) $: respectively, all dots in the right column and all dots in the left column;&lt;/li&gt;
+&lt;li&gt;Posteriors:
+&lt;ul&gt;
+&lt;li&gt;$ \Pr(D \mid + ) $: all red dots in the right column;&lt;/li&gt;
+&lt;li&gt;$ \Pr(H \mid + ) $: all blue  dots in the right column;&lt;/li&gt;
+&lt;li&gt;$ \Pr(D \mid - ) $: all red dots in the left column;&lt;/li&gt;
+&lt;li&gt;$ \Pr(H \mid - ) $: all blue  dots in the left column.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;more-on-bayes-theorem&#34;&gt;More on Bayes&amp;rsquo; Theorem&lt;/h2&gt;
+&lt;p&gt;One of the most important application of Bayes&amp;rsquo; Theorem is inference: it allows us to put probability values on unknown parameter. Consider a random variable $x$ which is distributed conditional on an unknown parameter $ \theta \in \Theta $. You  observe some realizations $ x_{obs} $. Using these observations, we are interested in learning more about the true value of $ \theta $. One interpretation is that this information tells you something about the model behind  data.&lt;/p&gt;
+&lt;p&gt;To make this inference, you need to start from a &lt;em&gt;prior distribution&lt;/em&gt; on the unknown parameter $\theta$, that is $ \Pr(\theta) $ for each value $ \theta \in \Theta $. This summarize the observer&amp;rsquo;s available information (or lack of information) about the parameter. Moreover, you need a &lt;em&gt;likelihood function&lt;/em&gt; that tells you how to interpret the observations, absent prior knowledge.  Formally, it is equal to the probability of the observed data under a parameter realization: $ \Pr (x  \mid \theta ).$&lt;/p&gt;
+&lt;div style=&#34;float:center;&#34;&gt;
+        &lt;img src=&#34;conditional.png&#34; height=&#34;400&#34; width=&#34;400&#34;  /&gt;
+        &lt;p style=&#34;text-align:center;&#34;&gt;Example of conditional distribution&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;However, since the parameter is unknown and we can fix $ x $ using $ x_{obs} $, we treat the likelihood as a function of $ \theta $: it expresses the plausibility of different parameter values for a given sample of data. A Bayesian observer computes a posterior distribution of $ \theta  $ given the observed value. In general, the posterior $\Pr(\theta \mid x_{obs})$ is the probability density function over the unknown $\theta$ given the observations $x_{obs}$, calculated by Bayes&amp;rsquo; rule as
+$$ \Pr(\theta  \mid x_{obs}) = \frac{ \Pr (x_{obs} \mid \theta)\Pr(\theta)}{\Pr(x_{obs})} $$&lt;/p&gt;
+&lt;p&gt;Bayes&amp;rsquo; Theorem updates the information on $\theta$ by extracting the information on $\theta$ contained in the observation $x_{obs}$. So we can use this result to choose the best among a set of hypotheses as follows: each possible value of the parameter is a hypothesis, and the likelihood of that  is the observer&amp;rsquo;s belief that the observations would arise under that hypothesis; priors and posteriors are both belief distributions whose arguments are hypothesis; we should select the hypothesis with the highest posterior to make our choices.&lt;/p&gt;
+&lt;p&gt;Last, it is very useful to note that the posterior is proportional to the product of prior and likelihood (denominator is a normalization factor independent of $\theta$):
+$$ \Pr(\theta  \mid x_{obs}) \propto \Pr (x_{obs} \mid \theta)\Pr(\theta). $$&lt;/p&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt; Go back to point (a) of the previous exercise. Draw the four products of prior and  likelihood and check that it is suggestive of the final posterior.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;img src=&#34;product.png&#34; height=&#34;400&#34; width=&#34;400&#34;  /&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;exercise-competing-hypotheses&#34;&gt;Exercise: Competing hypotheses&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=KMl5l6mOySU&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;balls.jpg&#34; height=&#34;400&#34; width=&#34;400&#34;  /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You observe bouncy balls all moving downward. You only consider two possible scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Scenario 1:&lt;/strong&gt; all balls are part of the same object, thus they always move together. They move together either up or down, each with probability 0.5.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scenario 2:&lt;/strong&gt; Each ball is an object by itself and independently moves either up or down, each with probability 0.5.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Considering only four bouncy balls, you want to learn which of the following story is true. Note that in this example you only care about direction, whereas speed and position do not play a role in this problem.&lt;/p&gt;
+&lt;h4 id=&#34;likelihoods&#34;&gt;Likelihoods&lt;/h4&gt;
+&lt;p&gt;The likelihood of a scenario is the probability of the observations under that scenario: $ \Pr( obs \mid Scenario ).$&lt;/p&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(a) What is the likelihood of Scenario 1?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;$\Pr(obs \mid Scenario 1) = 0.5 = 1/2.$&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(b) What is the likelihood of Scenario 2?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;$ \Pr(obs \mid Scenario 2) = (0.5)^{4} = 1/16.$&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(c) Do the likelihoods of the scenarios sum to one?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;No, there is no law of probability that says that probabilities of same observations under different scenarios sum up to one.&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(d) What is wrong with the phrase &#34;the likelihood of the observations&#34;?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;One cannot speak about the likelihood of something without an considering a scenario to condition on. Remember that a likelihood is a conditional probability.&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;priors&#34;&gt;Priors&lt;/h4&gt;
+&lt;p&gt;In many applications of interest, priors are not well-defined. In this examples, assume that Scenario 1 occurs twice as often as Scenario 2. You can use these frequencies of occurrence as prior probabilities, reflecting expectations in the absence of specific observations.&lt;/p&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(e) What are the prior probabilities of Scenario 1 and 2?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;$\Pr(Scenario 1) = 2/3, \quad \Pr(Scenario 2)= 1/3. $&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;h4 id=&#34;normalization-factor&#34;&gt;Normalization Factor&lt;/h4&gt;
+&lt;p&gt;As an intermediate step, you need to calculate the product of the likelihood of a scenario multiplied by its prior probability: $ \Pr(obs \mid Scenario) \times \Pr(Scenario).$&lt;/p&gt;
+&lt;p&gt;These are used to calculate the numerator in Bayes&amp;rsquo; rule.&lt;/p&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(f) Calculate this product for Scenario 1 and 2?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;$ \Pr(obs \mid Scenario 1) \times \Pr(Scenario1 ) &amp;amp;= 2/3 \times 1/2 = 1/3$&lt;/p&gt;
+&lt;p&gt;$ \Pr(obs \mid Scenario 2) \times \Pr(Scenario2 ) &amp;amp; = 1/3 \times 1/16 = 1/48$&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(g) Sum the two products. Is it equal to one?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;No: $ \quad  \Pr(obs \mid Scenario 1) \times \Pr(Scenario1 ) +  \Pr(obs \mid Scenario 2) \times \Pr(Scenario2 ) = 1/3 + 1/48 = 17/48 $.&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p&gt;The normalization factor in Bayes&amp;rsquo; Rule is the overall probability of the observations and it is sum of the two products, as calculated above. This is because posteriors have to sum up to one.&lt;/p&gt;
+&lt;h4 id=&#34;posteriors&#34;&gt;Posteriors&lt;/h4&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(h) Divide the product of prior and likelihood by the normalization factor for each scenario&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;$$	\Pr(Scenario 1 \mid obs) = \frac{\Pr(obs \mid Scenario 1) \times \Pr(Scenario1 ) }{\Pr(obs \mid Scenario 1) \times \Pr(Scenario1 )  + \Pr(obs \mid Scenario 2) \times \Pr(Scenario2 )} 
+= \frac{1/3}{17/48}=\frac{1}{3} \times \frac{48}{17}=  \frac{16}{17}. $$&lt;/p&gt;
+&lt;p&gt;$$ \Pr(Scenario 2 \mid obs) = \frac{\Pr(obs \mid Scenario 2) \times \Pr(Scenario 2 ) }{\Pr(obs \mid Scenario 1) \times \Pr(Scenario1 )  + \Pr(obs \mid Scenario 2) \times \Pr(Scenario2 )} = \frac{1/48}{17/48}= \frac{1}{48} \times \frac{48}{17}= \frac{1}{17}.$$&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p&gt;You have just applied Bayes&amp;rsquo; rule to obtain the posteriors for each scenario. Now you want to pick scenario with the highest posterior.&lt;/p&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(i) Which scenario has the highest posterior?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;Scenario 1 is more likely given our observations. 
+Indeed, the brain has a tendency to group the dots together because of their common motion, and perceive them as a single object. This is called &lt;a href=&#34;https://en.wikipedia.org/wiki/Gestalt_psychology#Law_of_Common_Fate&#34;&gt;Gestalt principle of common fate&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You have just explained a well-known phenomena by Bayes inference!&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;exercise-multiple-inputs&#34;&gt;Exercise: Multiple Inputs&lt;/h3&gt;
+&lt;p&gt;Consider the following model: your utility of breakfast is given by the product of quality coffee and the quality of the cake you consume:
+$$ U(\mbox{breakfast})= \mbox{quality of cake} \times \mbox{quality of coffee}. $$
+Assume that the quality is evaluated between 0 and 1.&lt;/p&gt;
+&lt;p&gt;This morning you had a very bad breakfast, with utility of breakfast today 0.2. You want to understand the cause of that. You are better at assessing separately the quality of coffee, but not the quality of cake.&lt;/p&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(a) Suppose further that you hypothesized the quality of the coffee to be 1 (very good coffee). Under this hypothesis, calculate what the quality of the cake must have been.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;$$ \underbrace{U(\mbox{breakfast})}_{0.2} = \mbox{quality of cake} \times \underbrace{\mbox{quality of coffee}}_1 $$&lt;/p&gt;
+&lt;p&gt;So the quality of cake must have been 0.2.&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(b) What if you suppose that  the quality of coffee to be 0.4?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;$$ \underbrace{U(\mbox{breakfast})}&lt;em&gt;{0.2} = \mbox{quality of cake} \times \underbrace{\mbox{quality of coffee}}&lt;/em&gt;{0.4}$$&lt;/p&gt;
+&lt;p&gt;So the quality of cake must have been 0.5.&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(c) Why utility of breakfast provides ambiguous information about quality of the cake?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;Because quality of coffee modulates the utility of breakfast together with the quality of cake and you do not have accurate information on that.&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(d) By going through a few more examples like the ones in (a) and (b), draw on the two-variable likelihood diagram all combinations of hypothesized  quality of coffee and hypothesized quality of cake that could have produced the utility of breakfast equal to 0.2. &lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;&lt;img src=&#34;likelihood1.png&#34; height=&#34;400&#34; width=&#34;400&#34;  /&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(e) Suppose that you have a strong prior that quality of coffee is uniformly distributed between 0.2 and 0.4 for sure. In the two-variable prior diagram, shade the area corresponding to the support of the prior.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;&lt;img src=&#34;prior2.png&#34; height=&#34;400&#34; width=&#34;400&#34;  /&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(f) Can we infer something about the quality of cake? Finally draw where the posterior probability is high. &lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;&lt;img src=&#34;posterior3.png&#34; height=&#34;400&#34; width=&#34;400&#34;  /&gt;&lt;/p&gt;
+&lt;p&gt;You can just restricted your posterior. If you believe that the quality of coffee is between 0.2 and 0.5, it means that the quality of cake was above 0.5: the cake was good!&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;puzzle-monty-hall-paradox&#34;&gt;Puzzle: Monty Hall Paradox&lt;/h2&gt;
+&lt;p&gt;You&amp;rsquo;re on a TV show. You&amp;rsquo;re given the choice of three doors: behind one door is a car (prize); behind the others, goats (non-prize). Which one would you pick? Suppose you pick door No.1. Now the host, who knows what&amp;rsquo;s behind the doors, does not open the one you selected but opens another door, say No. 3, which has a goat. Then the host says to you, ``Do you want to pick door No. 2?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cXqDIFUB7YU&#34;&gt;Does it matter if you switch?&lt;/a&gt; Yes! This is a famous counter-intuitive problem. Let&amp;rsquo;s use Bayes&amp;rsquo; Rule to solve it.&lt;/p&gt;
+&lt;p&gt;Denote the event &amp;ldquo;door $ i $ hides a car&amp;rdquo; with $ C_i $.&lt;/p&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(a)
+When the host of the TV show gives you the choice to pick a door, what is your prior probability of finding the car behind each door?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;Since you do not have any information, you believe each door is equally likely to hide the car:
+$ \Pr(C_1) = \Pr(C_2) = \Pr(C_3) = \frac{1}{3}.$&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p&gt;Denote the event &amp;ldquo;door $ i $ is chosen by the guest&amp;rdquo; with $ X_i $ and the event &amp;ldquo;door $ i $  is opened&amp;rdquo; with $ O_i $. Your priors are unchanged after the host opens a door, by independence between the event $ C_i $ and $ X_i $ (the player doesn&amp;rsquo;t know where is the car in order to make a choice). This implies that $ \Pr(C_i, X_i)  = \Pr(C_i) \times \Pr(X_i)$.&lt;/p&gt;
+&lt;p&gt;Initially you have chosen door No. 1. Now the host will open a door that does not hide the car.&lt;/p&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(b) What is the probability that the host will open door No. 3 in the following cases?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;ul&gt;
+&lt;li&gt;The car is behind door No. 1: $ \Pr(O_3 \mid X_1, C_1) = \frac{1}{2}.$&lt;/li&gt;
+&lt;li&gt;The car is behind door No. 2: $ \Pr(O_3 \mid X_1, C_2) = 1.$&lt;/li&gt;
+&lt;li&gt;The car is behind door No. 3: $ \Pr(O_3 \mid X_1, C_3) = 0.$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(c) What is the overall probability that the host will open door no.3?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;Using total law of probability:
+$$ 	\Pr(O_3 \mid X_1) = \Pr(O_3 \mid X_1, C_1) \times \Pr(C_1) + \Pr(O_3 \mid X_1, C_2) \times \Pr(C_2) + \Pr(O_3 \mid X_1, C_3) \times \Pr(C_3) = \frac{1}{2} \times \frac{1}{3} + 1 \times \frac{1}{3} + 0 \times \frac{1}{3} = \frac{1}{2}.$$&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+The host opens door No.3. Now we know that $ \Pr(C_3 \mid 0_3) = 0 $ (posterior probability).
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(d) Use Bayes&#39; rule to calculate the conditional probability that the car is behind the door you chose, given  that door No.3 was open: $ \Pr(C_1 \mid X_1, O_3) $. &lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;$$\Pr(C_1 \mid X_1, O_3) = \frac{\Pr(O_3 \mid X_1, C_1) \times \Pr(C_1, X_1)}{\Pr(X_1, O_3)}  = \frac{\Pr(O_3 \mid X_1, C_1) \times \Pr(C_1) \times \Pr(X_1)}{\Pr(O_3 \mid X_1)\times \Pr(X_1)}  = \frac{1/2 \times 1/3 \times 1}{1/2 \times 1} = \frac{1}{3} $$&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(e) Calculate the conditional probability that the car is behind the other door.&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;This is just the complement of $\Pr(C_2 \mid X_1, O_3)  $, since door No.3 was open.&lt;/p&gt;
+&lt;p&gt;$$\Pr(C_2 \mid X_1, O_3) = 1- \Pr(C_2 \mid X_1, O_3) = \frac{2}{3} $$&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+&lt;p style=&#34;;color: #C5EC5A&#34;&gt;(f) Should you switch door?&lt;/p&gt;
+&lt;details&gt;
+&lt;summary&gt; &lt;i&gt; solution  &lt;/i&gt; &lt;/summary&gt;
+&lt;p&gt;Yes!&lt;/p&gt;
+&lt;/details&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Frustration and anger in the Ultimatum game: An experiment</title>
+      <link>https://chiaraina.github.io/publication/abg/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://chiaraina.github.io/publication/abg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tailored Stories</title>
+      <link>https://chiaraina.github.io/publication/tailored/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://chiaraina.github.io/publication/tailored/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
